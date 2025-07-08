@@ -90,24 +90,24 @@ function next() {
 
 <style scoped lang="postcss">
 .review-section {
-  @apply relative px-60 py-20 h-[470px] bg-center bg-cover;
+  @apply 2xl:relative 2xl:px-60 2xl:py-20 2xl:h-[470px] 2xl:bg-center 2xl:bg-cover;
 }
 
 .review-container {
-  @apply relative bg-white/80 h-[330px] z-20 pt-12 pb-6 px-12 flex items-center justify-between gap-8;
+  @apply 2xl:relative 2xl:bg-white/80 2xl:h-[330px] 2xl:z-20 2xl:pt-12 2xl:pb-6 2xl:px-12 2xl:flex 2xl:items-center 2xl:justify-between 2xl:gap-8;
 }
 
 .review-nav-button {
-  @apply hover:scale-110 transition relative z-20;
+  @apply 2xl:hover:scale-110 2xl:transition 2xl:relative 2xl:z-20;
 }
 
 .review-overlay {
-  @apply absolute inset-0 bg-[#333]/50;
+  @apply 2xl:absolute 2xl:inset-0 2xl:bg-[#333]/50;
 }
 .review-content {
-  @apply flex flex-col items-center gap-2;
+  @apply 2xl:flex 2xl:flex-col 2xl:items-center 2xl:gap-2;
 }
 .dots-container {
-  @apply flex gap-2 absolute bottom-4;
+  @apply 2xl:flex 2xl:gap-2 2xl:absolute 2xl:bottom-4;
 }
 </style>

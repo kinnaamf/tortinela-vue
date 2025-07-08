@@ -24,18 +24,18 @@ const props = defineProps<{
 
 <style scoped lang="postcss">
 .review-content {
-  @apply flex flex-col items-center max-w-3xl mx-auto text-center relative;
+  @apply 2xl:flex 2xl:flex-col 2xl:items-center 2xl:max-w-3xl 2xl:mx-auto 2xl:text-center 2xl:relative;
 }
 
 .review-text {
-  @apply text-[20px] leading-relaxed;
+  @apply 2xl:text-[20px] 2xl:leading-relaxed;
 }
 
 .review-avatar {
-  @apply h-24 w-24 object-cover rounded-full mt-2 mb-2 opacity-70;
+  @apply 2xl:h-24 2xl:w-24 2xl:object-cover 2xl:rounded-full 2xl:mt-2 2xl:mb-2 2xl:opacity-70;
 }
 
 .review-username {
-  @apply text-lg font-semibold uppercase;
+  @apply 2xl:text-lg 2xl:font-semibold 2xl:uppercase;
 }
 </style>

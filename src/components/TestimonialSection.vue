@@ -16,12 +16,12 @@ const subtitle = "păreri despre produsele noastre"
 
 <style scoped lang="postcss">
 .testimonial-section {
-  @apply flex flex-col items-center my-12;
+  @apply 2xl:flex 2xl:flex-col 2xl:items-center 2xl:my-12;
 }
 .testimonial-title {
-  @apply text-[#333] font-semibold text-[30px];
+  @apply 2xl:text-[#333] 2xl:font-semibold 2xl:text-[30px];
 }
 .testimonial-subtitle {
-  @apply text-[#563A15]/50 text-[25px] uppercase;
+  @apply 2xl:text-[#563A15]/50 2xl:text-[25px] 2xl:uppercase;
 }
 </style>

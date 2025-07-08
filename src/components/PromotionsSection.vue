@@ -19,23 +19,23 @@ const discount = "până la 40% reducere "
 
 <style scoped lang="postcss">
 .promo-heading {
-  @apply flex flex-col items-center;
+  @apply 2xl:flex 2xl:flex-col 2xl:items-center;
 }
 
 .promo-title {
-  @apply text-[#333] font-semibold text-[30px];
+  @apply 2xl:text-[#333] 2xl:font-semibold 2xl:text-[30px];
 }
 
 .promo-discount {
-  @apply text-[#563A15]/50 text-[25px] uppercase;
+  @apply 2xl:text-[#563A15]/50 2xl:text-[25px] 2xl:uppercase;
 }
 
 .promo-products {
-  @apply px-20 mt-8;
+  @apply 2xl:px-20 2xl:mt-8;
 }
 
 .promo-carousel {
-  @apply mt-16 flex items-center text-nowrap gap-8 overflow-x-hidden;
+  @apply 2xl:mt-16 2xl:flex 2xl:items-center 2xl:text-nowrap 2xl:gap-8 2xl:overflow-x-hidden;
 }
 
 </style>

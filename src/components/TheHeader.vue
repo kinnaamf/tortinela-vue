@@ -15,6 +15,6 @@ import AuthLink from "@/components/AuthLink.vue";
 
 <style scoped lang="postcss">
 .header {
-  @apply flex justify-between items-center px-36 py-3
+  @apply 2xl:flex 2xl:justify-between 2xl:items-center 2xl:px-36 2xl:py-3
 }
 </style>

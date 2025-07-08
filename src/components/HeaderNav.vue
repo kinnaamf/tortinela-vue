@@ -10,7 +10,7 @@
 
 <style scoped lang="postcss">
 .nav-link {
-  @apply hover:underline transition-all duration-200 hover:text-[#BC7E2D];
+  @apply 2xl:hover:underline 2xl:transition-all 2xl:duration-200 2xl:hover:text-[#BC7E2D];
 }
 
 .list {

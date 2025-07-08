@@ -20,6 +20,6 @@ const isHovered = ref(false);
 
 <style scoped lang="postcss">
 .item-button {
-  @apply w-16 h-16 bg-white/90 rounded-full flex items-center justify-center z-50 hover:bg-[#BC7E2D];
+  @apply 2xl:w-16 2xl:h-16 2xl:bg-white/90 2xl:rounded-full 2xl:flex 2xl:items-center 2xl:justify-center 2xl:z-50 2xl:hover:bg-[#BC7E2D];
 }
 </style>

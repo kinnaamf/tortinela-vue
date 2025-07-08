@@ -93,11 +93,11 @@ const products = [
 
 <style scoped lang="postcss">
 .product-grid {
-  @apply grid grid-cols-6 h-[540px] gap-4 text-white;
+  @apply 2xl:grid 2xl:grid-cols-6 2xl:h-[540px] 2xl:gap-4 2xl:text-white;
 }
 
 .product-card {
-  @apply relative rounded-lg overflow-hidden bg-no-repeat bg-cover bg-center cursor-pointer;
+  @apply 2xl:relative 2xl:rounded-lg 2xl:overflow-hidden 2xl:bg-no-repeat 2xl:bg-cover 2xl:bg-center 2xl:cursor-pointer;
 }
 
 .product-overlay {
