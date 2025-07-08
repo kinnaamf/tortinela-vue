@@ -101,15 +101,15 @@ const products = [
 }
 
 .product-overlay {
-  @apply absolute inset-0 transition-opacity duration-300;
+  @apply 2xl:absolute 2xl:inset-0 2xl:transition-opacity 2xl:duration-300;
 }
 
 .product-darken {
-  @apply absolute inset-0 bg-[#333]/50;
+  @apply 2xl:absolute 2xl:inset-0 2xl:bg-[#333]/50;
 }
 
 .product-discount-badge {
-  @apply absolute top-3 right-3 bg-white text-black w-24 font-bold h-24 rounded-full flex justify-center items-center;
+  @apply 2xl:absolute 2xl:top-3 2xl:right-3 2xl:bg-white 2xl:text-black 2xl:w-24 2xl:font-bold 2xl:h-24 2xl:rounded-full 2xl:flex 2xl:justify-center 2xl:items-center;
 }
 
 .discount-text {
