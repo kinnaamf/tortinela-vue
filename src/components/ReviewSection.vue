@@ -64,11 +64,24 @@ function next() {
         <ArrowIcon/>
       </button>
 
-      <ReviewContent :review="reviews[activeIndex]"/>
+      <div class="review-content">
+        <ReviewContent :review="reviews[activeIndex]"/>
+        <div class="dots-container">
+          <button
+              v-for="(review, i) in reviews"
+              :key="i"
+              @click="activeIndex = i"
+              class="w-3 h-3 rounded-full transition-all duration-300"
+              :class="activeIndex === i ? 'border-[#BC7E2D] border-2 bg-[#BC7E2D]/80 ' : 'bg-[#fff]'"
+          >
+          </button>
+        </div>
+      </div>
 
       <button @click="next" class="review-nav-button rotate-180" aria-label="Next review">
         <ArrowIcon/>
       </button>
+
     </div>
 
     <div class="review-overlay"></div>
@@ -90,5 +103,11 @@ function next() {
 
 .review-overlay {
   @apply absolute inset-0 bg-[#333]/50;
+}
+.review-content {
+  @apply flex flex-col items-center gap-2;
+}
+.dots-container {
+  @apply flex gap-2 absolute bottom-4;
 }
 </style>
