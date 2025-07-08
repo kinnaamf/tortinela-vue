@@ -8,10 +8,28 @@ const motto = "Gustul care transformă orice zi \n" +
 </script>
 
 <template>
-  <div class="text-white flex flex-col justify-center h-full items-center ">
-    <span class="text-[72px] font-medium">{{ title }}</span>
-    <span class="text-[#FFA429] text-[32px]">{{ subtitle }}</span>
-    <span class="text-[40px] whitespace-pre-line text-center">{{ motto }}</span>
+  <div class="hero-content">
+    <span class="title">{{ title }}</span>
+    <span class="subtitle">{{ subtitle }}</span>
+    <span class="motto">{{ motto }}</span>
     <DiscoverButton class="mt-12"></DiscoverButton>
   </div>
 </template>
+
+<style scoped lang="postcss">
+.hero-content {
+  @apply text-white 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:h-full 2xl:items-center;
+}
+
+.title {
+  @apply 2xl:text-[72px] 2xl:font-medium;
+}
+
+.subtitle {
+  @apply 2xl:text-[#FFA429] 2xl:text-[32px];
+}
+
+.motto {
+  @apply 2xl:text-[40px] 2xl:whitespace-pre-line 2xl:text-center;
+}
+</style>

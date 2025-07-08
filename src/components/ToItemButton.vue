@@ -5,7 +5,7 @@ const isHovered = ref(false);
 </script>
 
 <template>
-  <button class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center z-50 hover:bg-[#BC7E2D]"
+  <button class="item-button"
           @mouseenter="isHovered = true"
           @mouseleave="isHovered = false"
   >
@@ -17,3 +17,9 @@ const isHovered = ref(false);
     </svg>
   </button>
 </template>
+
+<style scoped lang="postcss">
+.item-button {
+  @apply w-16 h-16 bg-white/90 rounded-full flex items-center justify-center z-50 hover:bg-[#BC7E2D];
+}
+</style>

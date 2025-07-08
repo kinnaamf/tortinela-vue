@@ -2,6 +2,8 @@
 import {ref} from "vue";
 import background from "@/assets/images/review-section.jpg";
 import ArrowIcon from "@/components/icons/ArrowIcon.vue";
+import ReviewContent from "@/components/ReviewContent.vue";
+
 import userImage1 from "@/assets/images/users/user1.png";
 import userImage2 from "@/assets/images/users/user2.png";
 import userImage3 from "@/assets/images/users/user3.png";
@@ -21,7 +23,7 @@ const reviews = [
     content:
         'O adevărată încântare! <span class="text-[#BC7E2D]">Tortinella</span> are cele mai delicioase prăjituri pe care le-am gustat vreodată. Revin mereu cu drag!',
     userImage: userImage2,
-    userName: "Muntean viorel",
+    userName: "Muntean Viorel",
   },
   {
     content:
@@ -39,13 +41,12 @@ const reviews = [
     content:
         'Când vine vorba de dulciuri, sunt destul de pretențioasă, dar <span class="text-[#BC7E2D]">Tortinella</span> m-a cucerit complet! Deserturile lor sunt o combinație perfectă de savoare, textură și aspect.',
     userImage: userImage5,
-    userName: "cacinshi cristina",
+    userName: "Cacinshi Cristina",
   },
 ];
 
 function prev() {
-  activeIndex.value =
-      (activeIndex.value - 1 + reviews.length) % reviews.length;
+  activeIndex.value = (activeIndex.value - 1 + reviews.length) % reviews.length;
 }
 
 function next() {
@@ -55,55 +56,39 @@ function next() {
 
 <template>
   <div
-      class="relative px-60 py-20 h-[470px] bg-center bg-cover"
+      class="review-section"
       :style="{ backgroundImage: `url(${background})` }"
   >
-    <div
-        class="relative bg-white/80 h-[330px] z-20 pt-12 pb-6 px-12 items-center flex justify-between gap-8">
-      <!-- Prev -->
-      <button @click="prev" class="hover:scale-110 transition relative z-20">
+    <div class="review-container">
+      <button @click="prev" class="review-nav-button" aria-label="Previous review">
         <ArrowIcon/>
       </button>
 
-      <!-- Review -->
-      <div class="flex flex-col items-center gap-4">
-        <div
-            v-if="reviews.length"
-            class="flex flex-col items-center max-w-3xl mx-auto text-center"
-        >
-          <h2
-              v-html="reviews[activeIndex].content"
-              class="text-[20px] leading-relaxed"
-          ></h2>
-          <img
-              :src="reviews[activeIndex].userImage"
-              class="h-24 w-24 object-cover rounded-full mt-2 mb-2 opacity-70"
-              alt=""
-          />
-          <h2 class="text-lg font-semibold uppercase">
-            {{ reviews[activeIndex].userName }}
-          </h2>
+      <ReviewContent :review="reviews[activeIndex]"/>
 
-          <!-- Dots -->
-
-        </div>
-
-        <div class="flex gap-[6px] absolute bottom-4">
-          <button
-              v-for="(review, i) in reviews"
-              :key="i"
-              @click="activeIndex = i"
-              class="w-3 h-3 rounded-full transition-all duration-300"
-              :class="activeIndex === i ? 'border-[#BC7E2D] border-2 bg-[#BC7E2D]/80 ' : 'bg-[#fff]'"
-          >
-          </button>
-        </div>
-      </div>
-      <!-- Next -->
-      <button @click="next" class="rotate-180 hover:scale-110 transition relative z-20">
+      <button @click="next" class="review-nav-button rotate-180" aria-label="Next review">
         <ArrowIcon/>
       </button>
     </div>
-    <div class="absolute inset-0 bg-[#333]/50 "></div>
+
+    <div class="review-overlay"></div>
   </div>
 </template>
+
+<style scoped lang="postcss">
+.review-section {
+  @apply relative px-60 py-20 h-[470px] bg-center bg-cover;
+}
+
+.review-container {
+  @apply relative bg-white/80 h-[330px] z-20 pt-12 pb-6 px-12 flex items-center justify-between gap-8;
+}
+
+.review-nav-button {
+  @apply hover:scale-110 transition relative z-20;
+}
+
+.review-overlay {
+  @apply absolute inset-0 bg-[#333]/50;
+}
+</style>

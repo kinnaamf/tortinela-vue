@@ -1,9 +1,9 @@
 <template>
-  <div class="grid grid-cols-6 h-[540px] gap-4 text-white">
+  <div class="product-grid">
     <div
         v-for="(product, index) in products"
         :key="index"
-        class="relative rounded-lg overflow-hidden bg-no-repeat bg-cover bg-center group cursor-pointer"
+        class="product-card"
         :style="{
         backgroundImage: 'url(' + product.image + ')',
         gridArea: product.area,
@@ -12,20 +12,20 @@
         @mouseleave="hoveredIndex = null"
     >
       <div
-          class="absolute inset-0 transition-opacity duration-300"
+          class="product-overlay"
           :class="hoveredIndex === index ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'"
       >
-        <div class="absolute inset-0 bg-[#333]/50"></div>
+        <div class="product-darken"></div>
         <div
-            class="absolute top-3 right-3 bg-white text-black w-24 font-bold h-24 rounded-full flex justify-center items-center"
+            class="product-discount-badge"
         >
-          <div class="text-center leading-tight text-[30px] flex flex-col select-none">
+          <div class="discount-text">
             <span>{{ product.discount }}%</span>
             <span class="text-[14px] font-normal">off</span>
           </div>
         </div>
         <div
-            class="z-10 text-white absolute bottom-3 left-3 whitespace-pre-line text-[18px] flex flex-col font-semibold"
+            class="product-info"
         >
           <span>{{ product.title }}</span>
           <span>{{ product.weight }}</span>
@@ -33,7 +33,7 @@
       </div>
 
       <ToItemButton
-          class="absolute inset-0 top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transition-opacity duration-300"
+          class="product-button"
           :class="hoveredIndex === index ? 'opacity-100' : 'opacity-0 pointer-events-none'"
       />
     </div>
@@ -90,3 +90,38 @@ const products = [
   },
 ]
 </script>
+
+<style scoped lang="postcss">
+.product-grid {
+  @apply grid grid-cols-6 h-[540px] gap-4 text-white;
+}
+
+.product-card {
+  @apply relative rounded-lg overflow-hidden bg-no-repeat bg-cover bg-center cursor-pointer;
+}
+
+.product-overlay {
+  @apply absolute inset-0 transition-opacity duration-300;
+}
+
+.product-darken {
+  @apply absolute inset-0 bg-[#333]/50;
+}
+
+.product-discount-badge {
+  @apply absolute top-3 right-3 bg-white text-black w-24 font-bold h-24 rounded-full flex justify-center items-center;
+}
+
+.discount-text {
+  @apply text-center leading-tight text-[30px] flex flex-col select-none;
+}
+
+.product-info {
+  @apply z-10 text-white absolute bottom-3 left-3 whitespace-pre-line text-[18px] flex flex-col font-semibold;
+}
+
+.product-button {
+  @apply absolute inset-0 top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transition-opacity duration-300;
+}
+
+</style>

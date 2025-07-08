@@ -3,7 +3,13 @@ const buttonText = "Descoperă"
 </script>
 
 <template>
-  <button class="bg-[#BC7E2D] px-12 py-5 uppercase rounded-full hover:bg-[#333333] transition-all">
+  <button class="discover-button">
     {{ buttonText }}
   </button>
 </template>
+
+<style scoped lang="postcss">
+.discover-button {
+  @apply 2xl:bg-[#BC7E2D] 2xl:px-12 2xl:py-5 2xl:uppercase 2xl:rounded-full 2xl:hover:bg-[#333] 2xl:transition-all;
+}
+</style>

@@ -6,9 +6,15 @@ import AuthLink from "@/components/AuthLink.vue";
 </script>
 
 <template>
-  <header class="flex justify-between items-center px-36 py-3">
+  <header class="header">
     <TheLogo/>
     <HeaderNav></HeaderNav>
     <AuthLink></AuthLink>
   </header>
 </template>
+
+<style scoped lang="postcss">
+.header {
+  @apply flex justify-between items-center px-36 py-3
+}
+</style>
