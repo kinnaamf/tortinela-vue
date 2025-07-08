@@ -3,7 +3,7 @@
     <div
         v-for="(product, index) in products"
         :key="index"
-        class="relative rounded-lg overflow-hidden bg-no-repeat bg-cover bg-center group"
+        class="relative rounded-lg overflow-hidden bg-no-repeat bg-cover bg-center group cursor-pointer"
         :style="{
         backgroundImage: 'url(' + product.image + ')',
         gridArea: product.area,
@@ -19,7 +19,7 @@
         <div
             class="absolute top-3 right-3 bg-white text-black w-24 font-bold h-24 rounded-full flex justify-center items-center"
         >
-          <div class="text-center leading-tight text-[30px] flex flex-col">
+          <div class="text-center leading-tight text-[30px] flex flex-col select-none">
             <span>{{ product.discount }}%</span>
             <span class="text-[14px] font-normal">off</span>
           </div>

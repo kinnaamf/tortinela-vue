@@ -4,7 +4,7 @@ import BrightIcon from "@/components/icons/BrightIcon.vue";
 </script>
 
 <template>
-  <div class="">
+  <div class="select-none">
     <div v-for="(item, index) in 10" :key="index" class="text-[20px] font-medium">
       <div v-if="index%2===0" class="uppercase flex items-center gap-1">
         <DarkIcon/>
