@@ -20,6 +20,6 @@ import BrightIcon from "@/components/icons/BrightIcon.vue";
 
 <style scoped lang="postcss">
 .carousel-content {
-  @apply 2xl:uppercase 2xl:flex 2xl:items-center 2xl:gap-1;
+  @apply uppercase flex items-center gap-1 text-[14px] 2xl:text-xl;
 }
 </style>

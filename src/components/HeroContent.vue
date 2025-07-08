@@ -18,18 +18,18 @@ const motto = "Gustul care transformă orice zi \n" +
 
 <style scoped lang="postcss">
 .hero-content {
-  @apply text-white 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:h-full 2xl:items-center;
+  @apply text-white flex flex-col justify-center h-full items-center;
 }
 
 .title {
-  @apply 2xl:text-[72px] 2xl:font-medium;
+  @apply text-[72px] font-medium;
 }
 
 .subtitle {
-  @apply 2xl:text-[#FFA429] 2xl:text-[32px];
+  @apply text-[#FFA429] text-[32px];
 }
 
 .motto {
-  @apply 2xl:text-[40px] 2xl:whitespace-pre-line 2xl:text-center;
+  @apply text-[24px] 2xl:text-[40px] whitespace-pre-line text-center;
 }
 </style>

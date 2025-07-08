@@ -32,10 +32,10 @@ const props = defineProps<{
 }
 
 .review-avatar {
-  @apply 2xl:h-24 2xl:w-24 2xl:object-cover 2xl:rounded-full 2xl:mt-2 2xl:mb-2 2xl:opacity-70;
+  @apply h-16 w-16 2xl:h-24 2xl:w-24 object-cover rounded-full mt-2 mb-2 opacity-70;
 }
 
 .review-username {
-  @apply 2xl:text-lg 2xl:font-semibold 2xl:uppercase;
+  @apply text-lg mb-4 2xl:mb-0 font-semibold uppercase;
 }
 </style>

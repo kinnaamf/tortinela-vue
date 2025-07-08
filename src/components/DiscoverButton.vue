@@ -10,6 +10,6 @@ const buttonText = "Descoperă"
 
 <style scoped lang="postcss">
 .discover-button {
-  @apply 2xl:bg-[#BC7E2D] 2xl:px-12 2xl:py-5 2xl:uppercase 2xl:rounded-full 2xl:hover:bg-[#333] 2xl:transition-all;
+  @apply bg-[#BC7E2D] px-8 2xl:px-12 py-5 uppercase rounded-full 2xl:hover:bg-[#333] 2xl:transition-all;
 }
 </style>

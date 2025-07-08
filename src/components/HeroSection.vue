@@ -15,14 +15,14 @@ import HeroContent from "@/components/HeroContent.vue";
 
 <style scoped lang="postcss">
 .hero-wrapper {
-  @apply 2xl:relative 2xl:w-full 2xl:h-[80vh] 2xl:bg-cover 2xl:bg-center;
+  @apply relative w-full z-0 2xl:h-[80vh] bg-cover bg-center h-[60vh];
 }
 
 .hero-overlay {
-  @apply 2xl:absolute 2xl:inset-0 2xl:bg-black/60 2xl:z-10;
+  @apply absolute inset-0 bg-black/60 -z-10;
 }
 
 .hero-content {
-  @apply 2xl:relative 2xl:z-10 2xl:h-full;
+  @apply relative z-10 h-full;
 }
 </style>

@@ -13,7 +13,7 @@
     >
       <div
           class="product-overlay"
-          :class="hoveredIndex === index ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'"
+          :class="hoveredIndex === index ? '2xl:opacity-0 2xl:pointer-events-none' : '2xl:opacity-100 2xl:pointer-events-auto'"
       >
         <div class="product-darken"></div>
         <div
@@ -93,11 +93,11 @@ const products = [
 
 <style scoped lang="postcss">
 .product-grid {
-  @apply 2xl:grid 2xl:grid-cols-6 2xl:h-[540px] 2xl:gap-4 2xl:text-white;
+  @apply 2xl:grid 2xl:grid-cols-6 2xl:grid-rows-2 2xl:h-[540px] gap-4 text-white flex flex-col;
 }
 
 .product-card {
-  @apply 2xl:relative 2xl:rounded-lg 2xl:overflow-hidden 2xl:bg-no-repeat 2xl:bg-cover 2xl:bg-center 2xl:cursor-pointer;
+  @apply relative rounded-lg overflow-hidden bg-no-repeat bg-cover bg-center 2xl:cursor-pointer 2xl:h-full h-96;
 }
 
 .product-overlay {
@@ -105,15 +105,15 @@ const products = [
 }
 
 .product-darken {
-  @apply 2xl:absolute 2xl:inset-0 2xl:bg-[#333]/50;
+  @apply absolute inset-0 bg-[#333]/50;
 }
 
 .product-discount-badge {
-  @apply 2xl:absolute 2xl:top-3 2xl:right-3 2xl:bg-white 2xl:text-black 2xl:w-24 2xl:font-bold 2xl:h-24 2xl:rounded-full 2xl:flex 2xl:justify-center 2xl:items-center;
+  @apply 2xl:absolute 2xl:top-3 2xl:right-3 2xl:bg-white 2xl:text-black 2xl:w-24 2xl:font-bold 2xl:h-24 2xl:rounded-full 2xl:flex 2xl:justify-center 2xl:items-center hidden ;
 }
 
 .discount-text {
-  @apply text-center leading-tight text-[30px] flex flex-col select-none;
+  @apply 2xl:text-center 2xl:leading-tight 2xl:text-[30px] 2xl:flex 2xl:flex-col 2xl:select-none;
 }
 
 .product-info {

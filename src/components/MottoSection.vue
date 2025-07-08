@@ -18,14 +18,14 @@ const motto = "“Dulce simplu, gust desăvârșit“"
 
 <style scoped lang="postcss">
 .motto-section {
-  @apply 2xl:relative 2xl:w-screen 2xl:-z-20 2xl:bg-cover 2xl:bg-center 2xl:bg-no-repeat;
+  @apply relative w-screen -z-20 bg-cover bg-center bg-no-repeat;
 }
 
 .dark-overlay {
-  @apply 2xl:absolute 2xl:-z-10 2xl:inset-0 2xl:bg-[#333]/50;
+  @apply absolute -z-10 inset-0 bg-[#333]/50;
 }
 
 .motto {
-  @apply 2xl:text-white/80 2xl:text-[30px] 2xl:z-10 2xl:text-center 2xl:py-16;
+  @apply text-white/80 text-[30px] z-10 text-center py-16;
 }
 </style>
